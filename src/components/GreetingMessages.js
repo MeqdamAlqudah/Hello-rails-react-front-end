@@ -7,7 +7,7 @@ const GENERATE_RANDOME_GREETING_REQUEST = "GENERATE_RANDOME_GREETING_REQUEST"
 const GENERATE_RANDOME_GREETING = "GENERATE_RANDOME_GREETING"
 function getThings(){
     store.dispatch({type: GENERATE_RANDOME_GREETING_REQUEST});
-    return fetch(`http://localhost:3000/api/v1/greetings`).then(response=>response.json()).then(json=>store.dispatch(getThingsSuccess(json))).catch(error=>console.log(error))
+    return fetch(`http://localhost:3000/v1/greetings`).then(response=>response.json()).then(json=>store.dispatch(getThingsSuccess(json))).catch(error=>console.log(error))
 
 };
 class GreetingMessages extends React.Component {
